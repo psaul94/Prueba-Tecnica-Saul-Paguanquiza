@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JuegoRuleta", "JuegoRuleta\JuegoRuleta.csproj", "{EB214ED0-2E6B-48B9-9144-83C842D82C9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{37508530-A040-44AD-B4C8-04808A1BFECA}"
+	ProjectSection(SolutionItems) = preProject
+		Context.cs = Context.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{F24F77C9-7956-43B3-88A6-F5F8C9049673}"
+	ProjectSection(SolutionItems) = preProject
+		Gamer.cs = Gamer.cs
+		GamerService.cs = GamerService.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Persistencia\Persistencia.csproj", "{63B691EC-C1BC-43F5-A892-49EA1505ABDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB214ED0-2E6B-48B9-9144-83C842D82C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB214ED0-2E6B-48B9-9144-83C842D82C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB214ED0-2E6B-48B9-9144-83C842D82C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB214ED0-2E6B-48B9-9144-83C842D82C9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B691EC-C1BC-43F5-A892-49EA1505ABDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B691EC-C1BC-43F5-A892-49EA1505ABDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B691EC-C1BC-43F5-A892-49EA1505ABDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B691EC-C1BC-43F5-A892-49EA1505ABDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F24F77C9-7956-43B3-88A6-F5F8C9049673} = {37508530-A040-44AD-B4C8-04808A1BFECA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BE42C5C-02BD-4FA4-8916-ECB7B0FDDD74}
+	EndGlobalSection
+EndGlobal

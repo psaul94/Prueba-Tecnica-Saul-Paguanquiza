@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<template>
+    <Roulette ref="wheel" :items="items" @@click="launchWheel" />
+</template>
+
+<div id="app">{{ message }}</div>
+
+@section Scripts{
+    <script setup>
+        import { ref } from 'vue'
+        const wheel = ref(null);
+        const items = [
+            { id: 1, name: "Banana", htmlContent: "Banana", textColor: "", background: "" },
+            { id: 2, name: "Apple", htmlContent: "Apple", textColor: "", background: "" },
+            { id: 3, name: "Orange and Purple", htmlContent: "Orange<br>and Purple", textColor: "", background: "" },
+            { id: 4, name: "Cherry", htmlContent: "Cherry", textColor: "", background: "" },
+        ];
+
+        function launchWheel() {
+            wheel.value.launchWheel();
+        }
+    </script>
+    <script>
+        import { Roulette } from "vue3-roulette";
+        export default {
+            name: "App",
+            components: {
+                Roulette,
+            },
+            data() {
+                return {
+                    items: [
+                        {
+                            id: 1,
+                            name: "Banana",
+                            htmlContent: "Banana",
+                            textColor: "",
+                            background: "",
+                        },
+                        {
+                            id: 2,
+                            name: "Apple",
+                            htmlContent: "Apple",
+                            textColor: "",
+                            background: "",
+                        },
+                        {
+                            id: 3,
+                            name: "Orange and Purple",
+                            htmlContent: "Orange<br>and Purple",
+                            textColor: "",
+                            background: "",
+                        },
+                        {
+                            id: 4,
+                            name: "Cherry",
+                            htmlContent: "Cherry",
+                            textColor: "",
+                            background: "",
+                        },
+                    ],
+                };
+            },
+            methods: {
+                launchWheel() {
+                    this.$refs.wheel.launchWheel();
+                },
+            },
+        };
+    </script>
+    <script type="module">
+        import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+        createApp({
+            setup() {
+                const message = ref('Hello Vue!')
+                return {
+                    message
+                }
+            }
+        }).mount('#app')
+    </script>
+}
+
+<style>
+    #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+    }
+</style>
